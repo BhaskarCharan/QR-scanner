@@ -1,3 +1,24 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <div class="ion-padding">
+    <ion-button>StartScan</ion-button>
+  </div>
+  <ion-footer class="ion-no-border">
+    <ion-segment color="success" value="scan">
+      <ion-segment-button value="history" layout="icon-bottom">
+        <ion-icon name="timer-outline" size="small"></ion-icon>
+        <ion-label>History</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="scan" layout="icon-bottom" (click)="OpenModal()">
+        <ion-icon name="scan-outline" size="large"></ion-icon>
+        <ion-label>Start Scan</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="create" layout="icon-bottom">
+        <ion-icon name="create-outline" size="small"></ion-icon>
+        <ion-label>Generate</ion-label>
+      </ion-segment-button>
+
+    </ion-segment>
+  </ion-footer>
 </ion-app>

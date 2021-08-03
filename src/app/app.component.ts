@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { HomePage } from './home/home.page';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(public modalController: ModalController) {}
+
+OpenModal(){
+  this.modalController.create({component:HomePage}).then((modalElement)=>{
+    modalElement.present();
+  })
+}
+
+
 }
