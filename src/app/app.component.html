@@ -1,24 +1,31 @@
 <ion-app>
-  <div class="ion-padding">
-    <ion-button>StartScan</ion-button>
-  </div>
-  <ion-footer class="ion-no-border">
-    <ion-segment color="success" value="scan">
-      <ion-segment-button value="history" layout="icon-bottom">
-        <ion-icon name="timer-outline" size="small"></ion-icon>
-        <ion-label>History</ion-label>
-      </ion-segment-button>
+  <ion-header translucent>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title>KWIKBOX</ion-title>
+    </ion-toolbar>
+  </ion-header>
+    <ion-content fullscreen>
+      <ion-card>
+        <ion-card-content>
+          <ion-item lines="none">
+            <ion-icon  name="newspaper-outline" slot="end" size="large" color="warning"></ion-icon>
+            <ion-label>
+             Fetch Invoice ID<p>Please enter the invoice on your fee slip</p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-input placeholder="Invoice ID"></ion-input>
+            <ion-icon name="qr-code-outline" slot="end" (click)="OpenModal()"></ion-icon>
+          </ion-item>
+          <ion-item lines="none" class="ion-padding-top">
+            <ion-button color="primary" slot="end">pay</ion-button>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
 
-      <ion-segment-button value="scan" layout="icon-bottom" (click)="OpenModal()">
-        <ion-icon name="scan-outline" size="large"></ion-icon>
-        <ion-label>Start Scan</ion-label>
-      </ion-segment-button>
-
-      <ion-segment-button value="create" layout="icon-bottom">
-        <ion-icon name="create-outline" size="small"></ion-icon>
-        <ion-label>Generate</ion-label>
-      </ion-segment-button>
-
-    </ion-segment>
-  </ion-footer>
+    </ion-content>
+  
 </ion-app>

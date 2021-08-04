@@ -31,8 +31,7 @@ canvasElement: any;
   }
   CloseModal(){
     this.modalController.dismiss();
-  }
-
+  }  
 
   ngAfterViewInit(){
     this.canvasElement = this.canvas.nativeElement;
